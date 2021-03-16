@@ -1,0 +1,155 @@
+\documentclass[twocolumn]{article}
+
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\evensidemargin}{-0.5in}
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textwidth}{7.0in}
+\setlength{\textheight}{9.5in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.05in}
+\setlength{\columnseprule}{0.3pt}
+\usepackage{fancyvrb}
+\usepackage{relsize}
+\usepackage{hyperref}
+
+\begin{document}
+
+Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Directions: {\bf \Large Work only on this sheet} (on both sides, if
+needed); do not turn in any supplementary sheets of paper. There is
+actually plenty of room for your answers, as long as you organize
+yourself BEFORE starting writing.
+
+{\bf \Large Unless otherwise stated, give numerical answers as
+expressions, e.g. $\frac{2}{3} \times 6 - 1.8$.  Do NOT use
+calculators.}
+
+{\bf 1.} Suppose the random vector $X = (X_1,X_2,X_3)'$ has mean
+$(2.0,3.0,8.2)'$ and covariance matrix
+
+\def\refto#1{\in@AmS,{#1}\if T\cresult@AmS\refto@AmS#1\end@AmS\else
+
+  
+\def\Let@AmS{\relax@AmS\iffalse{\fi\let\\=\cr\iffalse}\fi}
+
+\begin{equation}
+   \left (
+   \begin{array}{ccc}
+   1 & 0.4 & -0.2\\
+   \  & 1 &  0.25 \\
+   \  & \  & 3
+   \end{array}
+   \right )     
+\end{equation}
+
+\begin{itemize}
+
+\item [(a)] (10) Fill in the three missing entries.
+
+\item [(b)] (10) Find $Cov(X_1,X_3)$.
+
+\item [(c)] (10) Find $\rho(X_2,X_3)$.
+
+\item [(d)] (10) Find $Var(X_3)$.
+
+\item [(e)] (15) Find the covariance matrix of $(X_1+X_2,X_2+X_3)'$.
+
+\item [(f)] (15) If in addition we know that $X_1$ has a normal
+distribution, find $P(1 < X_1 < 2.5)$, in terms of $\Phi()$.
+
+\item [(g)] (15) Consider the random variable $W = X_1 + X_2$.  Which of
+the following is true?
+(i) $Var(W) = Var(X_1+X_2)$.
+(ii) $Var(W) > Var(X_1+X_2)$.
+(iii) $Var(W) < Var(X_1+X_2)$.
+(iv) In order to determine which of the two variances is the larger one,
+we would need to know whether the variables $X_i$ have a multivariate
+normal distribution.
+(v) $Var(X_1+X_2)$ doesn't exist.
+
+\end{itemize}
+
+{\bf 2.} (15) What is the (approximate) output of this R code:
+
+\begin{Verbatim}[fontsize=\relsize{-2}]
+count <- 0
+for (i in 1:10000) {
+   count1 <- 0
+   count2 <- 0
+   count3 <- 0
+   for (j in 1:20) {
+      x <- runif(1)
+      if (x < 0.2) {
+         count1 <- count1 + 1 
+      } else if (x < 0.6) count2 <- count2 + 1 else 
+              count3 <- count3 + 1
+   }
+   if (count1 == 9 && count2 == 2 && count3 == 9) count <- count + 1
+}
+cat(count/10000)
+\end{Verbatim}
+
+{\bf Solutions:}
+
+{\bf 1a.}
+
+\begin{equation}
+   \left (
+   \begin{array}{ccc}
+   1 & 0.4 & -0.2\\
+   0.4  & 1 &  0.25 \\
+   -0.2  & 0.25  & 3
+   \end{array}
+   \right )     
+\end{equation}
+
+{\bf 1b.} -0.2
+
+{\bf 1c.} $ \frac {0.25} {\sqrt{1} \sqrt{3}} $
+
+{\bf 1d.} 3
+
+{\bf 1e.}
+
+$$
+   \left (
+   \begin{array}{ccc}
+   1 & 1 & 0 \\
+   0 & 1 & 1 
+   \end{array}
+   \right )     
+   \left (
+   \begin{array}{ccc}
+   1 & 0.4 & -0.2\\
+   0.4  & 1 &  0.25 \\
+   -0.2  & 0.25  & 3
+   \end{array}
+   \right )     
+   \left (
+   \begin{array}{cc}
+   1 & 0 \\
+   1 & 1 \\
+   0 & 1 
+   \end{array}
+   \right )     
+$$
+
+{\bf 1f.} $
+\Phi(\frac{2.5-2.0}{1}) - 
+\Phi(\frac{1-2.0}{1}) 
+$
+
+{\bf 1g.} (ii), by (3.29)
+
+{\bf 2.}
+
+$
+\frac{20!}{9!^2 2!}
+0.2^9 0.4^{11} 
+$
+$f(x)=x^2[$] normal text $g(x)=2$
+\end{document}
+

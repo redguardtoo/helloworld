@@ -1,0 +1,33 @@
+#+OPTIONS: toc:nil title:nil author:nil num:nil
+* hello
+world
+* bye hello world
+  :PROPERTIES: 
+  :EXPORT_OPTIONS: toc:nil title:nil author:nil num:nil
+  :MAIL_SUBJECT: mail title
+  :MAIL_TO: chenbin.sh@gmail.com
+  :MAIL_CC: person2@gmail.com
+  :MAIL_BCC: person3@gmail.com
+  :END:
+# world
+#+BEGIN_SRC ruby
+if sudo_check.include? cmd
+  if Process.uid.zero? and not File.stat(HOMEBREW_BREW_FILE).uid.zero?
+    raise "Cowardly refusing to `sudo brew #{cmd}`\n#{SUDO_BAD_ERRMSG}"
+  end
+end
+#+END_SRC
+
+#+BEGIN_SRC sh
+if [[ -x a]];then
+  echo hello
+fi
+
+hello
+#+END_SRC
+#+BEGIN_EXAMPLE
+hello world
+#+END_EXAMPLE
+** test
+hello world
+** test world

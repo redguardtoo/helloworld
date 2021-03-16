@@ -1,0 +1,9 @@
+hello world
+hello world
+<<<<<<< .mine
+This is fun stuff!
+=======
+This is a documentation file
+>>>>>>> .r6
+bye world
+bye world
