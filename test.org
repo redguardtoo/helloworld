@@ -1,0 +1,12 @@
+#+begin_src python :results output
+# 大写 65-91 小写 97-123
+def test():
+    for i in range(97, 123):
+        for j in range(97, 123):
+            for k in range(97,123):
+                print("C-%s %s %s" %(chr(i), chr(j), chr(k)), end="\n")
+
+test()
+# print("Hello World!")
+#+end_src
+
